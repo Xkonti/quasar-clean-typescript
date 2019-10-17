@@ -1,15 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-console.log('I am in the routes index!');
 import routes from './routes';
 
 Vue.use(VueRouter);
-
-console.log('Registered vue router!');
-/*
- * If not building with SSR mode, you can
- * directly export the Router instantiation
- */
 
 export default function(/* { store, ssrContext } */) {
   return new VueRouter({

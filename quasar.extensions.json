@@ -2,7 +2,7 @@
   "@quasar/typescript": {
     "webpack": "plugin",
     "rename": true,
-    "vscode": false,
+    "vscode": true,
     "prettier": true
   }
 }
