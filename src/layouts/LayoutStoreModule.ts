@@ -3,11 +3,11 @@ import Store from '../store/index';
 
 @Module({
   dynamic: true,
-  name: 'log',
+  name: 'layout',
   namespaced: true,
   store: Store
 })
-export default class MyLayoutStoreModule extends VuexModule {
+export default class LayoutStoreModule extends VuexModule {
   public leftDrawerOpen = false;
 
   @Mutation

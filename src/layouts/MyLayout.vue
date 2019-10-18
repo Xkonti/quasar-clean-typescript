@@ -122,11 +122,11 @@ import Component from 'vue-class-component';
 
 // Store modules
 import { getModule } from 'vuex-module-decorators';
-import MyLayoutStoreModule from './MyLayoutStoreModule';
+import LayoutStoreModule from './LayoutStoreModule';
 
 @Component
 export default class MyLayout extends Vue {
-  store: MyLayoutStoreModule = getModule(MyLayoutStoreModule);
+  store = getModule(LayoutStoreModule);
 
   get leftDrawerOpen() {
     return this.store.leftDrawerOpen;
