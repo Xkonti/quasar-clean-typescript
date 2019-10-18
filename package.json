@@ -19,8 +19,7 @@
     "quasar": "^1.2.2",
     "vue-class-component": "^7.1.0",
     "vue-i18n": "^8.15.0",
-    "vue-property-decorator": "^8.2.2",
-    "vuex-module-decorators": "^0.10.1"
+    "vue-property-decorator": "^8.2.2"
   },
   "devDependencies": {
     "@quasar/app": "^1.2.1",
@@ -34,7 +33,8 @@
     "eslint-config-prettier": "^6.4.0",
     "eslint-loader": "^3.0.2",
     "eslint-plugin-vue": "^5.2.3",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "vuex-module-decorators": "^0.10.1"
   },
   "engines": {
     "node": ">= 8.9.0",
