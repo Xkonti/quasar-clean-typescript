@@ -1,6 +1,6 @@
 # Quasar - Clean Typescript Template (quasar-clean-typescript)
 
-Simple Vue.js starter project using [Quasar Framework](https://quasar.dev/), official typescript extension and couple additional packages for class based components and class based Vuex store modules.
+Simple Vue.js starter project using [Quasar Framework](https://quasar.dev/), typescript extension and a couple of additional packages for class based components and class based Vuex store modules.
 
 This template is a standard project created using [Quasar CLI](https://quasar.dev/start/quasar-cli) with settings:
  - Sass with indented syntax
@@ -9,7 +9,7 @@ This template is a standard project created using [Quasar CLI](https://quasar.de
  - Airbnb ESLint preset with generated prettier config
 
 In addition the project has added:
- - Typescript support via [Official Quasar Typescript extension](https://github.com/quasarframework/app-extension-typescript)
+ - Typescript support via [Quasar Typescript extension](https://github.com/quasarframework/app-extension-typescript) created by the Quasar team
  - Support for class based Vue components via:
     - [Vue Class Component package](https://github.com/vuejs/vue-class-component)
     - [Vue Property Decorator package](https://github.com/kaorun343/vue-property-decorator)
