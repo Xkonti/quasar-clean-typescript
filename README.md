@@ -19,6 +19,10 @@ The template has the same content as the default Quasar CLI project, but everyth
 prettier config, all Vue components are class based. In addition the layout state is contained in separate Vuex
 store module which serves as an example of class based Vuex store module usage.
 
+## Customization
+
+If you would like to recreate this project on your own or customize some things, you can follow the [tutorial explaining how this template was created](https://dev.to/xkonti/creating-quasar-framework-project-with-typescript-support-51ge).
+
 ## Installation
 
  1. Clone this repository.
