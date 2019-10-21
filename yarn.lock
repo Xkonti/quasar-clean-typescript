@@ -832,10 +832,10 @@
   resolved "https://registry.yarnpkg.com/@positron/stack-trace/-/stack-trace-1.0.0.tgz#14fcc712a530038ef9be1ce6952315a839f466a8"
   integrity sha1-FPzHEqUwA475vhzmlSMVqDn0Zqg=
 
-"@quasar/app@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@quasar/app/-/app-1.2.1.tgz#2cc23ed9230106ffc1605cc01de43395bff21405"
-  integrity sha512-cJaq56iTrIf0n1jjov2IRGCkjEA66iq+gPF7y1UAHr38s699pNPLugblvdqoFAa20ogDw/VtlrHOuQBcHoZSqQ==
+"@quasar/app@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@quasar/app/-/app-1.2.2.tgz#ded118f5329b7c8fd1245898a409be1b0802c7e3"
+  integrity sha512-Z/l2j9EL6xXiO5eLTMPYcoHDSRf9gd+TC0F+2piJcG1OSEil51aeMWlvZBoxN4jz2Gm5ZiUwmq8mwttlzEeQMg==
   dependencies:
     "@quasar/babel-preset-app" "1.1.6"
     "@quasar/fastclick" "1.1.4"
@@ -936,10 +936,10 @@
   resolved "https://registry.yarnpkg.com/@quasar/fastclick/-/fastclick-1.1.4.tgz#21ed3e9a4387dcb43022a08af4ef08a5f1abf159"
   integrity sha512-i9wbyV4iT+v4KhtHJynUFhH5LiEPvAEgSnwMqPN4hf/8uRe82nDl5qP5agrp2el1h0HzyBpbvHaW7NB0BPrtvA==
 
-"@quasar/quasar-app-extension-typescript@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@quasar/quasar-app-extension-typescript/-/quasar-app-extension-typescript-1.0.0-beta.1.tgz#945aa301b51ac6e7e7766a6e7cceb736c289f7fb"
-  integrity sha512-mvv/ymLT+qlcw/nO0nKthd/b/haflbJ3RTMf4RdlzLR+QcegoY5p8M/gT8cbwQIkxlG5x/2sp8TJufB2NxCBng==
+"@quasar/quasar-app-extension-typescript@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@quasar/quasar-app-extension-typescript/-/quasar-app-extension-typescript-1.0.0-beta.2.tgz#3a2c8d2faa1cb958962a8c306b0c6e51225fb676"
+  integrity sha512-Ufs/WOPcOFpfYVeUCcfkz0x7J1fTv8a+2I6b5mDE2PPrXtgbdfWYQRtwfpXrx6Iy0oTfNkfIX30IatfpI1FDGw==
   dependencies:
     execa "^1.0.0"
     fork-ts-checker-webpack-plugin "^0.5.2"
@@ -7039,10 +7039,10 @@ qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
-quasar@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.2.2.tgz#9a64bb35814833c36a2585b86c5b84d862064510"
-  integrity sha512-aBeFvd/UGQfEdZM5Kd2z3qV/LXfetWL3gOJL6wnLdqhjFkOvaecc8r9HV6EKPt/pFiL1rlpwTOkQ2ARNTuYJJw==
+quasar@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.2.4.tgz#9987bc13ea22d0b8dbb02a615553f14b5bfa591d"
+  integrity sha512-PFA7W2Homm5qSnxs7Za7qAiyYHppifgPgAAcFu1skexfy3fgQaD+8R1GFFJYsIp/ce3vm/pcVvBDm4lKbwh43w==
 
 query-string@^4.1.0:
   version "4.3.4"
@@ -8752,12 +8752,12 @@ vue-property-decorator@^7.3.0:
   dependencies:
     vue-class-component "^6.2.0"
 
-vue-property-decorator@^8.2.2:
-  version "8.2.2"
-  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-8.2.2.tgz#ac895e9508ee1bf86e3a28568d94d842c2c8e42f"
-  integrity sha512-3gRrIeoUtjXvkoMX2stJsVs7805Pa9MXEndnk21ej+sWO7AIc5HF1TKqK0Pox5TEjpO02UbadIF0QWNrx6ZwXQ==
+vue-property-decorator@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-8.3.0.tgz#536f027dc7d626f37c8d85a2dc02f0a6cb979440"
+  integrity sha512-77YtTbZHd5CNiPzbqv51kEgL48yvD2dUDfF28vEyw3MbQ9bBAb/tDyFzskcqjNRbWyXk1vq4oM2CK/LfhxuIBg==
   dependencies:
-    vue-class-component "^7.0.1"
+    vue-class-component "^7.1.0"
 
 vue-router@3.1.3:
   version "3.1.3"
