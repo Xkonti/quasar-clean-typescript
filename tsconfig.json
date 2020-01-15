@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "sourceMap": true,
-    "target": "es6",
+    "target": "es5",//es6 will not work in cordova
     "strict": true,
     "experimentalDecorators": true,
     "module": "esnext",
