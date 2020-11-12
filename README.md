@@ -1,6 +1,6 @@
 # Quasar - Clean Typescript Template pre Quasar v1.9.6 (quasar-clean-typescript)
 
-> This is the version of the template created with Quasar prior to version 1.9.6. It refers to this article: [Creating Quasar Framework project with Typescript support (pre v1.9.6)](https://xkonti.tech/blog/quasar-framework-with-typescript-pre196/).
+> :warning: This is the version of the template created with Quasar prior to version 1.9.6. It refers to the older article: [Creating Quasar Framework project with Typescript support (pre v1.9.6)](https://xkonti.tech/blog/quasar-framework-with-typescript-pre196/). **If you want the newest version of this template use the [master branch](https://github.com/Xkonti/quasar-clean-typescript) instead.**
 
 Simple Vue.js starter project using [Quasar Framework](https://quasar.dev/), typescript extension and a couple of additional packages for class based components and class based Vuex store modules.
 
