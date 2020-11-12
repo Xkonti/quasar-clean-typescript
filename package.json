@@ -1,47 +1,52 @@
 {
   "name": "quasar-clean-typescript",
-  "version": "0.0.1",
-  "description": "Simple Vue.js starter project using Quasar Framework, official typescript extension and couple additional packages for class based components and class based Vuex store modules.",
+  "version": "2.0.0",
+  "description": "A simple Vue.js starter project using Quasar Framework, Typescript, class based components and class based Vuex modules.",
   "productName": "Quasar - Clean Typescript Template",
-  "cordovaId": "org.cordova.quasar.app",
-  "capacitorId": "",
-  "author": "Xkonti",
+  "author": "Beniamin (Xkonti) Dudek <xkonti@xkonti.tech>",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
-    "build": "quasar build",
-    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore ./",
+    "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.3.3",
-    "axios": "^0.19.0",
-    "quasar": "^1.5.9",
-    "vue-class-component": "^7.1.0",
-    "vue-i18n": "^8.15.1",
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "core-js": "^3.6.5",
+    "quasar": "^1.0.0",
+    "vue-class-component": "^7.2.2",
+    "vue-i18n": "^8.0.0",
     "vue-property-decorator": "^8.3.0"
   },
   "devDependencies": {
-    "@quasar/app": "^1.4.1",
-    "@quasar/quasar-app-extension-typescript": "^1.0.0-beta.2",
-    "@types/node": "^12.12.17",
-    "@typescript-eslint/eslint-plugin": "~2.11.0",
-    "@typescript-eslint/parser": "~2.11.0",
-    "@vue/eslint-config-airbnb": "^5.0.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-config-prettier": "^6.7.0",
+    "@quasar/app": "^2.0.0",
+    "@types/node": "^10.17.15",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
     "eslint-loader": "^3.0.3",
-    "eslint-plugin-vue": "^6.0.1",
-    "typescript": "^3.7.3",
-    "vuex-module-decorators": "^0.11.0"
-  },
-  "engines": {
-    "node": ">= 8.9.0",
-    "npm": ">= 5.6.0",
-    "yarn": ">= 1.6.0"
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2"
   },
   "browserslist": [
-    "last 1 version, not dead, ie >= 11"
-  ]
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
 }

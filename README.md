@@ -1,31 +1,26 @@
 # Quasar - Clean Typescript Template (quasar-clean-typescript)
 
-Simple Vue.js starter project using [Quasar Framework](https://quasar.dev/), typescript extension and a couple of additional packages for class based components and class based Vuex store modules.
+A simple Vue.js starter project using Quasar Framework, Typescript, class based components and class based Vuex modules.
 
-This template is a standard project created using [Quasar CLI](https://quasar.dev/start/quasar-cli) with settings:
- - Sass with indented syntax
- - Manually specify what to import (auto-import doesn't work with Typescript)
- - ESLint, Vuex, Axios, Vue-i18n plugins
- - Airbnb ESLint preset with generated prettier config
+## Install the dependencies
+```bash
+yarn
+```
 
-In addition the project has added:
- - Typescript support via [Quasar Typescript extension](https://github.com/quasarframework/app-extension-typescript) created by the Quasar team
- - Support for class based Vue components via:
-    - [Vue Class Component package](https://github.com/vuejs/vue-class-component)
-    - [Vue Property Decorator package](https://github.com/kaorun343/vue-property-decorator)
- - Support for class based Vuex store modules via [Vuex Module Decorators package](https://github.com/championswimmer/vuex-module-decorators)
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
 
-The template has the same content as the default Quasar CLI project, but everything is formatted with generated
-prettier config, all Vue components are class based. In addition the layout state is contained in separate Vuex
-store module which serves as an example of class based Vuex store module usage.
+### Lint the files
+```bash
+yarn run lint
+```
 
-## Customization
+### Build the app for production
+```bash
+quasar build
+```
 
-If you would like to recreate this project on your own or customize some things, you can follow the [tutorial explaining how this template was created](https://xkonti.tech/blog/quasar-framework-with-typescript-pre196/).
-
-## Installation
-
- 1. Clone this repository.
- 2. Rename project name, description, author etc. in `package.json` and `quasar.conf.js`.
- 3. Run `yarn install` command to install dependencies.
- 4. Run `dev` script from `package.json` to run the dev server.
+### Customize the configuration
+See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
