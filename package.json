@@ -1,6 +1,6 @@
 {
   "name": "quasar-clean-typescript",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple Vue.js starter project using Quasar Framework, official typescript extension and couple additional packages for class based components and class based Vuex store modules.",
   "productName": "Quasar - Clean Typescript Template",
   "cordovaId": "org.cordova.quasar.app",
