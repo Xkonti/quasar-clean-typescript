@@ -8,7 +8,7 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
+          @click="isLeftDrawerOpen = !isLeftDrawerOpen"
         />
 
         <q-toolbar-title>
@@ -20,7 +20,7 @@
     </q-header>
 
     <q-drawer
-      v-model="leftDrawerOpen"
+      v-model="isLeftDrawerOpen"
       show-if-above
       bordered
       content-class="bg-grey-1"
@@ -95,12 +95,20 @@ const linksData = [
 ]
 
 import { Vue, Component } from 'vue-property-decorator'
+import { LayoutStore } from 'src/store/LayoutStoreModule'
 
 @Component({
   components: { EssentialLink }
 })
 export default class MainLayout extends Vue {
-  leftDrawerOpen = false;
-  essentialLinks = linksData;
+  essentialLinks = linksData
+
+  get isLeftDrawerOpen () {
+    return LayoutStore.isLeftDrawerOpen
+  }
+
+  set isLeftDrawerOpen (value) {
+    LayoutStore.setLeftDrawer(value)
+  }
 }
 </script>
