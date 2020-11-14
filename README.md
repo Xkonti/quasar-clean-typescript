@@ -1,26 +1,24 @@
-# Quasar - Clean Typescript Template (quasar-clean-typescript)
+# Quasar - Clean Typescript Template
 
-A simple Vue.js starter project using Quasar Framework, Typescript, class based components and class based Vuex modules.
+A simple Vue.js starter project using [Quasar Framework](https://quasar.dev/) with:
+  - Axios
+  - ESLint with Standard preset
+  - Sass with SCSS syntax
+  - TypeScript with class-based components
+  - Vue-i18n
+  - Vuex with class-based modules
 
-## Install the dependencies
-```bash
-yarn
-```
+## Do it yourself
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+If you would like to recreate this project on your own or customize something, you can follow the [tutorial explaining how this template was created](https://xkonti.tech/blog/quasar-framework-with-typescript/).
 
-### Lint the files
-```bash
-yarn run lint
-```
+## Installation
 
-### Build the app for production
-```bash
-quasar build
-```
+ 1. Clone this repository.
+ 2. Rename project name, description, author etc. in `package.json` and `quasar.conf.js`.
+ 3. Run `yarn install` or `npm install` command to install dependencies.
+ 4. Run `dev` script from `package.json` to run the dev server.
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+## Previous versions
+
+  - Pre Quasar v1.9.6 version of this template was moved to the [`pre-v-1.9.6` branch](https://github.com/Xkonti/quasar-clean-typescript/tree/pre-v-1.9.6).
