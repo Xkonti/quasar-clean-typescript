@@ -1,13 +1,7 @@
 {
+  "extends": "@quasar/app/tsconfig-preset",
   "compilerOptions": {
-    "allowJs": true,
-    "sourceMap": true,
-    "target": "es6",
-    "strict": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": "."
-  },
-  "exclude": ["node_modules"]
+    "baseUrl": ".",
+    "experimentalDecorators": true
+  }
 }
