@@ -20,7 +20,7 @@
     </q-header>
 
     <q-drawer
-      v-model="leftDrawerOpen"
+      v-model="isLeftDrawerOpen"
       show-if-above
       bordered
     >
@@ -46,8 +46,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
+import { useLayoutStore } from 'src/store/layout-store'
+import { HomePagePath, routeTo } from 'src/router/routes'
 
 const essentialLinks = [
   {
@@ -94,8 +96,10 @@ const essentialLinks = [
   },
 ]
 
-const leftDrawerOpen = ref(false)
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value
+const layoutStore = useLayoutStore()
+// const { isLeftDrawerOpen, toggleLeftDrawer } = useLayoutStore()
+const isLeftDrawerOpen = computed(() => layoutStore.isLeftDrawerOpen)
+async function goHome () {
+  await routeTo(HomePagePath)
 }
 </script>
