@@ -8,7 +8,7 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="isLeftDrawerOpen = !isLeftDrawerOpen"
+          @click="layoutStore.toggleLeftDrawer"
         />
 
         <q-toolbar-title>
@@ -20,18 +20,17 @@
     </q-header>
 
     <q-drawer
-      v-model="isLeftDrawerOpen"
+      v-model="layoutStore.isLeftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-grey-1"
     >
       <q-list>
         <q-item-label
           header
-          class="text-grey-8"
         >
           Essential Links
         </q-item-label>
+
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
@@ -46,69 +45,59 @@
   </q-layout>
 </template>
 
-<script lang="ts">
-import EssentialLink from 'components/EssentialLink.vue'
+<script setup lang="ts">
+import { computed } from 'vue'
+import EssentialLink from 'components/essential-link.vue'
+import { useLayoutStore } from 'src/store/layout-store'
+import { HomePagePath, routeTo } from 'src/router/routes'
 
-const linksData = [
+const essentialLinks = [
   {
     title: 'Docs',
     caption: 'quasar.dev',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: 'https://quasar.dev',
   },
   {
     title: 'Github',
     caption: 'github.com/quasarframework',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: 'https://github.com/quasarframework',
   },
   {
     title: 'Discord Chat Channel',
     caption: 'chat.quasar.dev',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: 'https://chat.quasar.dev',
   },
   {
     title: 'Forum',
     caption: 'forum.quasar.dev',
     icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    link: 'https://forum.quasar.dev',
   },
   {
     title: 'Twitter',
     caption: '@quasarframework',
     icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    link: 'https://twitter.quasar.dev',
   },
   {
     title: 'Facebook',
     caption: '@QuasarFramework',
     icon: 'public',
-    link: 'https://facebook.quasar.dev'
+    link: 'https://facebook.quasar.dev',
   },
   {
     title: 'Quasar Awesome',
     caption: 'Community Quasar projects',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
+    link: 'https://awesome.quasar.dev',
+  },
 ]
 
-import { Vue, Component } from 'vue-property-decorator'
-import { LayoutStore } from 'src/store/LayoutStoreModule'
-
-@Component({
-  components: { EssentialLink }
-})
-export default class MainLayout extends Vue {
-  essentialLinks = linksData
-
-  get isLeftDrawerOpen () {
-    return LayoutStore.isLeftDrawerOpen
-  }
-
-  set isLeftDrawerOpen (value) {
-    LayoutStore.setLeftDrawer(value)
-  }
+const layoutStore = useLayoutStore()
+async function goHome () {
+  await routeTo(HomePagePath)
 }
 </script>
