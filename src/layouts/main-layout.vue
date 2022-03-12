@@ -8,7 +8,7 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="toggleLeftDrawer"
+          @click="layoutStore.toggleLeftDrawer"
         />
 
         <q-toolbar-title>
@@ -20,7 +20,7 @@
     </q-header>
 
     <q-drawer
-      v-model="isLeftDrawerOpen"
+      v-model="layoutStore.isLeftDrawerOpen"
       show-if-above
       bordered
     >
@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import EssentialLink from 'components/essential-link.vue'
 import { useLayoutStore } from 'src/store/layout-store'
 import { HomePagePath, routeTo } from 'src/router/routes'
 
@@ -97,8 +97,6 @@ const essentialLinks = [
 ]
 
 const layoutStore = useLayoutStore()
-// const { isLeftDrawerOpen, toggleLeftDrawer } = useLayoutStore()
-const isLeftDrawerOpen = computed(() => layoutStore.isLeftDrawerOpen)
 async function goHome () {
   await routeTo(HomePagePath)
 }
