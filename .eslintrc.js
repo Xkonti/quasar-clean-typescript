@@ -5,7 +5,7 @@ module.exports = {
   // Remove this if you have an higher level ESLint config file (it usually happens into a monorepos)
   root: true,
 
-  // https://eslint.vuejs.org/user-guide/#how-to-use-custom-parser
+  // https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
   // Must use parserOptions instead of "parser" to allow vue-eslint-parser to keep working
   // `parser: 'vue-eslint-parser'` is already included with any 'plugin:vue/**' config and should be omitted
   parserOptions: {
@@ -16,7 +16,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     project: resolve(__dirname, './tsconfig.json'),
     tsconfigRootDir: __dirname,
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    ecmaVersion: 'latest', // Allows for the parsing of modern ECMAScript features
     sourceType: 'module' // Allows for the use of imports
   },
 
@@ -38,31 +38,34 @@ module.exports = {
     // Uncomment any of the lines below to choose desired strictness,
     // but leave only one uncommented!
     // See https://eslint.vuejs.org/rules/#available-rules
-    'plugin:vue/essential', // Priority A: Essential (Error Prevention)
-    // 'plugin:vue/strongly-recommended', // Priority B: Strongly Recommended (Improving Readability)
-    // 'plugin:vue/recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
+    // 'plugin:vue/vue3-essential', // Priority A: Essential (Error Prevention)
+    // 'plugin:vue/vue3-strongly-recommended', // Priority B: Strongly Recommended (Improving Readability)
+    'plugin:vue/vue3-recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
 
     'standard'
-
   ],
 
   plugins: [
     // required to apply rules which need type information
     '@typescript-eslint',
 
-    // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-file
+    // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files
     // required to lint *.vue files
     'vue',
 
   ],
 
   globals: {
-    ga: true, // Google Analytics
-    cordova: true,
-    __statics: true,
-    process: true,
-    Capacitor: true,
-    chrome: true
+    ga: 'readonly', // Google Analytics
+    cordova: 'readonly',
+    __statics: 'readonly',
+    __QUASAR_SSR__: 'readonly',
+    __QUASAR_SSR_SERVER__: 'readonly',
+    __QUASAR_SSR_CLIENT__: 'readonly',
+    __QUASAR_SSR_PWA__: 'readonly',
+    process: 'readonly',
+    Capacitor: 'readonly',
+    chrome: 'readonly'
   },
 
   // add your custom rules here
@@ -71,17 +74,21 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow paren-less arrow functions
     'arrow-parens': 'off',
-    'one-var': 'off',
 
+    'comma-dangle': ['error', 'always-multiline'],
+    'one-var': 'off',
     'import/first': 'off',
-    'import/named': 'error',
     'import/namespace': 'error',
     'import/default': 'error',
     'import/export': 'error',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'multiline-ternary': 'error',
+    'no-unused-vars': 'off',
+    'no-void': 'off',
     'prefer-promise-reject-errors': 'off',
+    'semi': [2, 'never'],
 
     // TypeScript
     quotes: ['warn', 'single', { avoidEscape: true }],

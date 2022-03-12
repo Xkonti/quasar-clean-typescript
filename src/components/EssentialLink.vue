@@ -21,14 +21,22 @@
   </q-item>
 </template>
 
-<script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+<script setup lang="ts">
+import {
+  defineProps,
+  withDefaults,
+} from 'vue'
 
-@Component
-export default class EssentialLink extends Vue {
-  @Prop({ type: String, required: true }) readonly title!: string;
-  @Prop({ type: String, default: '' }) readonly caption!: string;
-  @Prop({ type: String, default: '#' }) readonly link!: string;
-  @Prop({ type: String, default: '' }) readonly icon!: string;
+interface Props {
+  title: string,
+  caption?: string,
+  link?: string,
+  icon?: string,
 }
+
+const props = withDefaults(defineProps<Props>(), {
+  caption: '',
+  link: '#',
+  icon: '',
+})
 </script>
