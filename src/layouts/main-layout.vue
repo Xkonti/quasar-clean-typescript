@@ -15,7 +15,27 @@
           Quasar App
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn
+          flat
+          class="onRight"
+          dense
+          label="Home"
+          aria-label="Home"
+          @click="routes.home.go()"
+        />
+
+        <q-btn
+          flat
+          class="onRight"
+          dense
+          label="Other"
+          aria-label="Other"
+          @click="routes.other.go()"
+        />
+
+        <div class="q-ml-md">
+          Quasar v{{ $q.version }}
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -46,10 +66,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import EssentialLink from 'components/essential-link.vue'
 import { useLayoutStore } from 'src/store/layout-store'
-import { HomePagePath, routeTo } from 'src/router/routes'
+import { routes } from 'src/router/routes'
 
 const essentialLinks = [
   {
@@ -97,7 +116,4 @@ const essentialLinks = [
 ]
 
 const layoutStore = useLayoutStore()
-async function goHome () {
-  await routeTo(HomePagePath)
-}
 </script>

@@ -1,18 +1,18 @@
 import { RouteRecordRaw } from 'vue-router'
-import { routerService } from 'src/services/router-service'
+import { processRoutes, RouteTarget } from 'src/router/route-processor'
 
-export type RouterPath = string[]
+export const routes = {
+  home: new RouteTarget(),
+  other: new RouteTarget(),
+}
 
-export const HomePagePath: RouterPath = []
-export const OtherPagePath: RouterPath = ['other', 'hello']
-
-const routes: RouteRecordRaw[] = [
+export const routingTree: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/main-layout.vue'),
     children: [
       {
-        path: '',
+        path: routes.home.assign(''),
         name: 'Home page',
         component: () => import('pages/home-page.vue'),
       },
@@ -23,7 +23,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/main-layout.vue'),
     children: [
       {
-        path: OtherPagePath[1],
+        path: routes.other.assign('hello'),
         name: 'Other page',
         component: () => import('pages/other-page.vue'),
       },
@@ -38,14 +38,4 @@ const routes: RouteRecordRaw[] = [
   },
 ]
 
-export default routes
-
-export function getPathTo (path: RouterPath) {
-  let fullPath = '/'
-  if (path.length > 0) fullPath += path.join('/')
-  return fullPath
-}
-
-export function routeTo (path: RouterPath) {
-  return routerService.router.push(getPathTo(path))
-}
+processRoutes(routingTree, Object.values(routes))

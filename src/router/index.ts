@@ -5,7 +5,7 @@ import {
   createWebHashHistory,
   createWebHistory,
 } from 'vue-router'
-import routes from './routes'
+import { routingTree as routes } from './routes'
 import { routerService } from 'src/services/router-service'
 
 /*

@@ -1,4 +1,5 @@
 import type { Router } from 'vue-router'
+import { RouteTarget } from 'src/router/route-processor'
 
 class RouterService {
   private routerInstance: Router | null = null
@@ -15,6 +16,11 @@ class RouterService {
 
   public assignRouter (instance: Router) {
     this.routerInstance = instance
+  }
+
+  public go (path: RouteTarget | string) {
+    const fullPath = path instanceof RouteTarget ? path.path : path
+    return routerService.router.push(fullPath)
   }
 }
 
