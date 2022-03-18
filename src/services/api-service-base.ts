@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import { merge } from 'lodash'
 import { ApiError } from 'src/services/api-error'
-import { err, ok, Result } from 'src/common/result'
+import { err, ok, Result } from 'rusty-result-ts'
 
 export class ApiServiceBase {
   protected urlBase = '/api'

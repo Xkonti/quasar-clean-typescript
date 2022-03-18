@@ -1,4 +1,4 @@
-import { Result } from 'src/common/result'
+import { Result } from 'rusty-result-ts'
 import { ApiError } from 'src/services/api-error'
 import { ApiServiceBase } from 'src/services/api-service-base'
 import { Counter } from 'src/models/counter'
