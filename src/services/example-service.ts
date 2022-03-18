@@ -1,6 +1,5 @@
 import { Result } from 'rusty-result-ts'
-import { ApiError } from 'src/services/api-error'
-import { ApiServiceBase } from 'src/services/api-service-base'
+import { ApiError, ApiServiceBase } from 'axios-service-base-ts'
 import { Counter } from 'src/models/counter'
 
 export class ExampleService extends ApiServiceBase {
