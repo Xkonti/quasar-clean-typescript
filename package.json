@@ -24,7 +24,8 @@
     "uuid": "^8.3.0",
     "vue": "^3.2",
     "vue-i18n": "^9.1.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vue-smart-routes": "^0.1.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",

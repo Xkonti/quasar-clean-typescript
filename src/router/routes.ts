@@ -1,5 +1,5 @@
 import { RouteRecordRaw } from 'vue-router'
-import { processRoutes, RouteTarget } from 'src/router/route-processor'
+import { processRoutes, RouteTarget } from 'vue-smart-routes'
 
 export const routes = {
   home: new RouteTarget(),

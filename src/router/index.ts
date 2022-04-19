@@ -6,7 +6,7 @@ import {
   createWebHistory,
 } from 'vue-router'
 import { routingTree as routes } from './routes'
-import { routerService } from 'src/services/router-service'
+import { routerService } from 'vue-smart-routes'
 
 /*
  * If not building with SSR mode, you can

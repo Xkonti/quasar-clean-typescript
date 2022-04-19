@@ -6319,6 +6319,13 @@ vue-router@^4.0.0:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
+vue-smart-routes@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/vue-smart-routes/-/vue-smart-routes-0.1.0.tgz#1c8bd4b498039035cc2d28fce1be1e65ec5f7f8b"
+  integrity sha512-Md/D365xj1lJOZwj4RJvxsYZEi7w8DzB7jixzMkRL86pvm2KjjE0KuFHAthl3DjJ9GKRh6f6ckZdSnrD68PPEg==
+  dependencies:
+    vue-router "^4.0.0"
+
 vue-style-loader@4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.3.tgz#6d55863a51fa757ab24e89d9371465072aa7bc35"
