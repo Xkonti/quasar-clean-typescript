@@ -6,8 +6,9 @@
   "author": "Beniamin (Xkonti) Dudek <xkonti@xkonti.tech>",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
+    "ci": "yarn install --immutable --immutable-cache --check-cache",
     "build": "quasar build",
+    "dev": "quasar dev",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },

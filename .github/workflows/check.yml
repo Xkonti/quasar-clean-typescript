@@ -26,8 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Install Yarn
+      run: npm i -g yarn
+
     - name: Install dependencies
-      run: npm ci
+      run: yarn run ci
 
     - name: Run linter
       uses: wearerequired/lint-action@v2
@@ -35,7 +38,7 @@ jobs:
         eslint: true
 
     - name: Run tests
-      run: npm test
+      run: yarn run test
 
     - name: Build
-      run: npm run build
+      run: yarn run build
