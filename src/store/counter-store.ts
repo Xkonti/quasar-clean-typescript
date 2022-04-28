@@ -23,7 +23,7 @@ export const useCounterStore = defineStore({
   actions: {
     createCounter () {
       this.counter = {
-        description: 'A simple counter created by the counter-store',
+        description: 'A simple counter created by the counter-store.',
         count: 0,
       }
     },

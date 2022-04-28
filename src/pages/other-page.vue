@@ -1,5 +1,7 @@
 <template>
-  <h1>This is some other page...</h1>
+  <h3 class="flex flex-center">
+    This is some other page...
+  </h3>
 </template>
 
 <script setup lang="ts">
