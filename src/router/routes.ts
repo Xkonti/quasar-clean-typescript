@@ -1,20 +1,41 @@
-import { RouteConfig } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router'
+import { processRoutes, RouteTarget } from 'vue-smart-routes'
 
-const routes: RouteConfig[] = [
+export const routes = {
+  home: new RouteTarget(),
+  other: new RouteTarget(),
+}
+
+export const routingTree: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/main-layout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
-    ]
+      {
+        path: routes.home.assign(''),
+        name: 'Home page',
+        component: () => import('pages/home-page.vue'),
+      },
+    ],
+  },
+  {
+    path: '/other',
+    component: () => import('layouts/main-layout.vue'),
+    children: [
+      {
+        path: routes.other.assign('hello'),
+        name: 'Other page',
+        component: () => import('pages/other-page.vue'),
+      },
+    ],
   },
 
   // Always leave this as last one,
   // but you can also remove it
   {
-    path: '*',
-    component: () => import('pages/Error404.vue')
-  }
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/error-404.vue'),
+  },
 ]
 
-export default routes
+processRoutes(routingTree, Object.values(routes))

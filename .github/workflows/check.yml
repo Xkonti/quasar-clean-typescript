@@ -1,0 +1,44 @@
+name: Check
+
+# Run the workflow on push and pull requests to the default branch
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install Yarn
+      run: npm i -g yarn
+
+    - name: Install dependencies
+      run: yarn run ci
+
+    - name: Run linter
+      uses: wearerequired/lint-action@v2
+      with:
+        eslint: true
+
+    - name: Run tests
+      run: yarn run test
+
+    - name: Build
+      run: yarn run build
