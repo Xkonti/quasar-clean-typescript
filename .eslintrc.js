@@ -12,16 +12,15 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration
     // https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#eslint
     // Needed to make the parser take into account 'vue' files
+    parser: require.resolve('@typescript-eslint/parser'),
     extraFileExtensions: ['.vue'],
-    parser: '@typescript-eslint/parser',
-    project: resolve(__dirname, './tsconfig.json'),
-    tsconfigRootDir: __dirname,
-    ecmaVersion: 'latest', // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module' // Allows for the use of imports
   },
 
   env: {
-    browser: true
+    browser: true,
+    es2021: true,
+    node: true,
+    'vue/setup-compiler-macros': true
   },
 
   // Rules order is important, please avoid shuffling them
@@ -32,8 +31,6 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#usage
     // ESLint typescript rules
     'plugin:@typescript-eslint/recommended',
-    // consider disabling this class of rules if linting takes too long
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
 
     // Uncomment any of the lines below to choose desired strictness,
     // but leave only one uncommented!
@@ -74,9 +71,10 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow paren-less arrow functions
     'arrow-parens': 'off',
-
-    'comma-dangle': ['error', 'always-multiline'],
     'one-var': 'off',
+    'no-void': 'off',
+    'multiline-ternary': 'off',
+
     'import/first': 'off',
     'import/namespace': 'error',
     'import/default': 'error',
@@ -84,17 +82,30 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'multiline-ternary': 'error',
-    'no-unused-vars': 'off',
-    'no-void': 'off',
+
+    // The core 'import/named' rules
+    // does not work with type definitions
+    'import/named': 'off',
+
     'prefer-promise-reject-errors': 'off',
+
+    quotes: ['warn', 'single', { avoidEscape: true }],
+
+    // this rule, if on, would require explicit return type on the `render` function
+    '@typescript-eslint/explicit-function-return-type': 'off',
+
+    // in plain CommonJS modules, you can't use `import foo = require('foo')` to pass this rule, so it has to be disabled
+    '@typescript-eslint/no-var-requires': 'off',
+
+    // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
+    // does not work with type definitions
+    'no-unused-vars': 'off',
+
+    'comma-dangle': ['error', 'always-multiline'],
     'semi': [2, 'never'],
 
-    // TypeScript
-    quotes: ['warn', 'single', { avoidEscape: true }],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    //'@typescript-eslint/explicit-module-boundary-types': 'off',
+    //'@typescript-eslint/no-unused-vars': 'warn',
 
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
