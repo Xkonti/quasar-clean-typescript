@@ -39,3 +39,9 @@ yarn lint
 ```bash
 yarn build
 ```
+
+## Older versions
+
+Older versions of the template are available on other branches:
+- `pre-v-1.9.6`: A version of the template that was using a version of Quasar Framework prior to the v1.9.6
+- `pre-v-2.0`: A version of the template that was using Quasar Framework prior to the v2.0
