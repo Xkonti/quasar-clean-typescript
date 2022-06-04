@@ -4,9 +4,8 @@ import { Counter } from 'src/models/counter'
 
 export class ExampleService extends ApiServiceBase {
   constructor () {
-    // Append `/v1` to all requests in addition to the default `/api` baseUrl
-    // resulting in `/api/v1` in front of every api request path
-    super('/v1')
+    // Prepend all API requests with `api/v1`
+    super('api/v1')
   }
 
   public async getCounter (): Promise<Result<Counter | null, ApiError>> {
