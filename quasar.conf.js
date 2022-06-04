@@ -99,7 +99,7 @@ module.exports = configure(function (/* ctx */) {
       // normal backend communication during development process.
       // proxy: {
       //   '/api': {
-      //     target: 'http://localhost:8081/api',
+      //     target: 'http://localhost:3000/',
       //     changeOrigin: true,
       //     pathRewrite: {
       //       '^/api': '',

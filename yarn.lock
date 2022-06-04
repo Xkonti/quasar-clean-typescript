@@ -659,14 +659,15 @@ autoprefixer@^10.4.2:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-axios-service-base-ts@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/axios-service-base-ts/-/axios-service-base-ts-0.1.0.tgz#2ea7d12bbf55043074b098ea26e76d9d2cc09ae6"
-  integrity sha512-6EKSbmx8AMISLZ5jdV8M01yGdgBSfbSb7+8hGQWeaoiXQflnGcWZXYQ1onQqj4KV6Lg4dBPcPg4adU8MV2tOJw==
+axios-service-base-ts@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/axios-service-base-ts/-/axios-service-base-ts-0.2.0.tgz#4fc710e751c8c1f01e222c22e2e79c83114aee85"
+  integrity sha512-dxDtLJmeponnvgBWktWvw3w2VIYoDyx7DScmYOMp4yRS32HL07VQUiDZTfqAS3QQt7hW/7H0yDx/AJt3NQxkIQ==
   dependencies:
     axios "^0.26.0"
     lodash "^4.17.0"
     rusty-result-ts "^0.1.0"
+    typescript "^4.7.3"
 
 axios@^0.26.0:
   version "0.26.1"
@@ -3259,6 +3260,11 @@ typescript@^4.6.3:
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.3.tgz#eefeafa6afdd31d725584c67a0eaba80f6fc6c6c"
   integrity sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==
+
+typescript@^4.7.3:
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.3.tgz#8364b502d5257b540f9de4c40be84c98e23a129d"
+  integrity sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==
 
 uglify-js@^3.5.1:
   version "3.15.3"
