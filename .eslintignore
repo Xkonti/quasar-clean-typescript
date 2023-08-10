@@ -5,4 +5,4 @@
 /node_modules
 .eslintrc.js
 /src-ssr
-/src/locales
+/quasar.config.*.temporary.compiled*

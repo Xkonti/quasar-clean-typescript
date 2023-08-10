@@ -14,29 +14,21 @@
 
     <q-item-section>
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>
-        {{ caption }}
-      </q-item-label>
+      <q-item-label caption>{{ caption }}</q-item-label>
     </q-item-section>
   </q-item>
 </template>
 
 <script setup lang="ts">
-import {
-  defineProps,
-  withDefaults,
-} from 'vue'
-
-interface Props {
-  title: string,
-  caption?: string,
-  link?: string,
-  icon?: string,
+export interface EssentialLinkProps {
+  title: string;
+  caption?: string;
+  link?: string;
+  icon?: string;
 }
-
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<EssentialLinkProps>(), {
   caption: '',
   link: '#',
-  icon: '',
+  icon: ''
 })
 </script>

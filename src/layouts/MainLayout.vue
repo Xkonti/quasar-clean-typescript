@@ -8,39 +8,19 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="layoutStore.toggleLeftDrawer"
+          @click="toggleLeftDrawer"
         />
 
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
 
-        <q-btn
-          flat
-          class="onRight"
-          dense
-          label="Home"
-          aria-label="Home"
-          @click="routes.home.go()"
-        />
-
-        <q-btn
-          flat
-          class="onRight"
-          dense
-          label="Other"
-          aria-label="Other"
-          @click="routes.other.go()"
-        />
-
-        <div class="q-ml-md">
-          Quasar v{{ $q.version }}
-        </div>
+        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
     <q-drawer
-      v-model="layoutStore.isLeftDrawerOpen"
+      v-model="leftDrawerOpen"
       show-if-above
       bordered
     >
@@ -66,54 +46,57 @@
 </template>
 
 <script setup lang="ts">
-import EssentialLink from 'components/essential-link.vue'
-import { useLayoutStore } from 'src/store/layout-store'
-import { routes } from 'src/router/routes'
+import { ref } from 'vue'
+import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue'
 
-const essentialLinks = [
+const essentialLinks: EssentialLinkProps[] = [
   {
     title: 'Docs',
     caption: 'quasar.dev',
     icon: 'school',
-    link: 'https://quasar.dev',
+    link: 'https://quasar.dev'
   },
   {
     title: 'Github',
     caption: 'github.com/quasarframework',
     icon: 'code',
-    link: 'https://github.com/quasarframework',
+    link: 'https://github.com/quasarframework'
   },
   {
     title: 'Discord Chat Channel',
     caption: 'chat.quasar.dev',
     icon: 'chat',
-    link: 'https://chat.quasar.dev',
+    link: 'https://chat.quasar.dev'
   },
   {
     title: 'Forum',
     caption: 'forum.quasar.dev',
     icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
+    link: 'https://forum.quasar.dev'
   },
   {
     title: 'Twitter',
     caption: '@quasarframework',
     icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
+    link: 'https://twitter.quasar.dev'
   },
   {
     title: 'Facebook',
     caption: '@QuasarFramework',
     icon: 'public',
-    link: 'https://facebook.quasar.dev',
+    link: 'https://facebook.quasar.dev'
   },
   {
     title: 'Quasar Awesome',
     caption: 'Community Quasar projects',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
-  },
+    link: 'https://awesome.quasar.dev'
+  }
 ]
 
-const layoutStore = useLayoutStore()
+const leftDrawerOpen = ref(false)
+
+function toggleLeftDrawer () {
+  leftDrawerOpen.value = !leftDrawerOpen.value
+}
 </script>
