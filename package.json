@@ -16,11 +16,11 @@
     "@quasar/extras": "^1.14.0",
     "@vueuse/core": "^8.6.0",
     "axios": "^0.27.2",
-    "axios-service-base-ts": "^0.2.0",
+    "axios-service-base-ts": "^0.3.0",
     "lodash": "^4.17.21",
+    "neverthrow": "^6.0.0",
     "pinia": "^2.0.14",
     "quasar": "^2.7.1",
-    "rusty-result-ts": "^0.1.0",
     "uuid": "^8.3.2",
     "vue": "^3.2.36",
     "vue-i18n": "^9.1.10",
@@ -28,8 +28,8 @@
     "vue-smart-routes": "^0.1.0"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^1.0.1",
     "@intlify/vite-plugin-vue-i18n": "^3.4.0",
+    "@quasar/app-vite": "^1.0.1",
     "@types/lodash": "^4.14.182",
     "@types/node": "^12.20.54",
     "@types/uuid": "^8.3.4",

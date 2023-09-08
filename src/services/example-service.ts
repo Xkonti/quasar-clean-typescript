@@ -1,4 +1,4 @@
-import { Result } from 'rusty-result-ts'
+import { Result } from 'neverthrow'
 import { ApiError, ApiServiceBase } from 'axios-service-base-ts'
 import { Counter } from 'src/models/counter'
 
@@ -8,7 +8,7 @@ export class ExampleService extends ApiServiceBase {
     super('api/v1')
   }
 
-  public async getCounter (): Promise<Result<Counter | null, ApiError>> {
+  public async getCounter (): Promise<Result<Counter, ApiError>> {
     return await this.get('/counter')
   }
 
