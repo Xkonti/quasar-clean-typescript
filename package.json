@@ -15,7 +15,7 @@
   "dependencies": {
     "@quasar/extras": "^1.14.0",
     "@vueuse/core": "^8.6.0",
-    "axios": "^0.27.2",
+    "axios": "^0.28.0",
     "axios-service-base-ts": "^0.3.0",
     "lodash": "^4.17.21",
     "neverthrow": "^6.0.0",
